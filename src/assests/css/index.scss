@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+a{
+    text-decoration : none;
+}
+nav {
+    background-color: rgb(32, 115, 248);
+    padding: 10px;
+    color: aliceblue;
+    box-shadow: 0px 0px 3px 2px blue;
+}
+
+.signIn, .signUp {
+    margin: 0 auto;
+    text-align: center;
+    margin: 5% 35%;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 60px 0;
+   min-height: 70vh;
+    box-shadow: 1px 1px 0px 0px rgb(37, 37, 37);
+
+    h1 {
+        margin:15px 0;
+        text-align: left;
+        padding-left: 65px;
+    }
+
+    input {
+        border: 1px solid gray;
+        width: 70%;
+        border-radius: 8px;
+        padding: 10px 12px;
+        margin: 15px 0;
+    }
+
+    h3 {
+        margin: 20px 0;
+        word-wrap: break-word;
+    }
+
+    .third-party {
+        width: 70%;
+        margin: 0 auto;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+        border: 1px solid gray;
+        border-radius: 6px;
+        padding: 6px;
+        margin-bottom: 20px;
+
+     
+            &:hover {
+                color: blue;
+            }
+    
+
+        .img-container {
+            img {
+              width: 23px;
+            }
+        }
+
+
+    }
+
+    .signInbutton {
+        padding: 10px 8px;
+        background-color: rgb(76, 140, 244);
+        border-radius: 8px;
+        color: white;
+        width: 70%;
+        display: block;
+        align-self: center;
+        margin: 0 auto;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    
+}
+.alert{
+    color:red;
+    background-color: rgb(252, 226, 226);
+    border-radius: 8px;
+    padding: 10px 12px;
+    text-align: center;
+    margin: 0 50px 20px 50px;
+}
+//Responsive
+@media (min-width:1281px) and (max-width:1440px){
+    .signIn,.signUp{
+        margin: 8% 32%;
+    }
+}
+@media (min-width:1051px) and (max-width:1280px){
+    .signIn,.signUp{
+        margin: 8% 28%;
+    }
+}
+@media (min-width:981px) and (max-width:1050px){
+    .signIn,.signUp{
+        margin: 8% 25%;
+    }
+}
+@media (min-width:769px) and (max-width:980px){
+    .signIn,.signUp{
+        margin:8% 23%;
+    }
+}
+@media(min-width:641px) and (max-width : 768px){
+    .signIn,.signUp{
+      margin: 8% 20%;
+    }
+     h3{
+      font-size: 20px;
+      padding: 10px 30px;
+      font-weight: normal;
+      }
+}
+@media(min-width:321px) and (max-width : 640px){
+    .signIn,.signUp{
+        margin: 8% 20%;
+      }
+      h1{
+        font-size: 25px;
+      }
+      h3{
+      font-size: 18px;
+      padding: 10px 30px;
+      font-weight: normal;
+      }
+}
+@media(min-width:280px) and (max-width : 320px){
+    .signIn,.signUp{
+        margin: 0;
+      }
+      p{
+        font-size: 14px;
+      }
+      h1{
+        font-size: 25px;
+      }
+      h3{
+      font-size: 18px;
+      padding: 10px 30px;
+      font-weight: normal;
+      }
+}
