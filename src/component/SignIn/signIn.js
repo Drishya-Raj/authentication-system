@@ -26,9 +26,17 @@ const SignIn = () => {
             localStorage.setItem('email',data.user.email)
             navigate('/home');
         }).catch((error) => {
-            // Handle sign-in errors
-            console.error('Sign-In error:', error.message);
-            
+           // Handle sign-up errors
+           const errorCode = error.code;
+           const errorMessage = error.message;
+           console.error('Sign-up error:', error.message);
+           if  (errorCode === "auth/network-request-failed") {
+            setError("Network error. Please check your internet connection.");
+            setShowAlert(!showAlert);
+           } else {
+               setError(errorMessage);
+               setShowAlert(!showAlert);
+           }
         });
     }
     const signInClick = (e)=>{
@@ -60,11 +68,9 @@ const SignIn = () => {
           
           onSuccess: (code) => {
             console.log(code);
-            console.log("Redirect URI:", `${window.location.origin}/linkedin`);
           },
           onError: (error) => {
             console.log(error);
-            console.log("Redirect URI:", `${window.location.origin}/linkedin`);
           },
         });
    
